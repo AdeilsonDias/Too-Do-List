@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: rgb(110, 110, 110);
+}
+.task_title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  font-size: 40px;
+  color: white;
+}
+.task_body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+input {
+  outline: none;
+  padding: 8px;
+  width: 30%;
+  border-right: none;
+  border: none;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border-radius: 2px;
+  font-size: 14px;
+}
+button {
+  padding: 8px;
+  border: none;
+  border-left: 3px solid rgb(1, 255, 1);
+  background-color: black;
+  color: rgb(1, 255, 1);
+  cursor: pointer;
+  transition: 0.4s;
+}
+button:hover {
+  background-color: rgb(43, 41, 41);
+}
+ul {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  margin-top: 24px;
+  list-style-type: none;
+  font-size: 14px;
+  flex-direction: column;
+  gap: 8px;
+}
+li {
+  background-color: rgb(53, 53, 53);
+  padding: 10px;
+  border-radius: 7px;
+  color: white;
+  list-style-type: none;
+  justify-content: space-between;
+  transform: translateY(-20px);
+  animation: slideIn 0.5s forwards;
+}
+span {
+  color: red;
+  margin-left: 14px;
+  cursor: pointer;
+  animation: slideSpan 1.5s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media (max-width: 600px) {
+  .task_title{
+    font-size: 22px;
+  }
+  input{
+    background-color: rgb(225, 230, 230);
+    padding: 10px;
+    width: 40%;
+    color: black;
+  }
+  button{
+    padding: 10px;
+    border: 2px solid green
+  }
+  ul {
+    font-size: 10px;
+  }
+  body{
+    background-color: black;
+  }
+ 
+}
